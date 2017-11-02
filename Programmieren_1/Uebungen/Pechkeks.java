@@ -12,15 +12,30 @@ public class Pechkeks {
 		
 		// Ausgabe: n mit !
 		
-		if ( n % 3 == 0)
+		if ( n % 3 == 0 && n % 5 == 0)
 		{
-			System.out.println("Pech!");
+			System.out.println("PechKeks!");
 		}
-		if ( n % 5 == 0)
+		else
 		{
-			System.out.println("Keks!");
+			if ( n % 5 == 0)
+			{
+				System.out.println("Keks!");
+			}
+			else
+			{
+				if ( n % 3 == 0 )
+				{
+					System.out.println("Pech!");
+				}
+				else
+				{
+					System.out.println("Ausgabe von n:" + n +"!");
+				}
+			}
 		}
 		
-		System.out.println("Ausgabe von n:" + n +"!");
+		
+		
 	}
 }
