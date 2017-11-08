@@ -14,7 +14,9 @@ public class Counter {
 		b2 = in.nextInt();
 		if (b0 == 0) {
 			b0 = 1;
-		} else {
+		} 
+		else 
+		{
 			b0 = 0;
 			if (b1 == 0) {
 				b1 = 1;

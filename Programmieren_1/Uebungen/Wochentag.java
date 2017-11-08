@@ -55,7 +55,7 @@ public class Wochentag {
 	    verschiebung = verschiebung + 30;
         }
 		
-		// Schaltjahrausgabe
+		// 1. Schaltjahrausgabe:alsaa Schaltjahr!
 		if (jahr % 4 == 0 && (jahr % 100 != 0 || jahr % 400 == 0))
 			System.out.println("Schaltjahr!");
 		
@@ -88,6 +88,8 @@ public class Wochentag {
 	} 
         if (ergebnis==6) {
 	    System.out.println("Sonntag");
+		
+		// 2. zusätzlich als Augabe: Sonntagskinder!
 		System.out.println("Sonntagskind!");
 	} 
 
