@@ -9,6 +9,7 @@
   line-height: 1.25;
   background-color: white;
   text-decoration: none;
+  /* box-sizing: border-box; Die richtige width Grösse*/
   }
 
 #Head {
@@ -18,6 +19,7 @@
 	width: 1024px;
 	height: 280px;
 	border: 1px solid black;
+	background: red;
 }  
   
   
