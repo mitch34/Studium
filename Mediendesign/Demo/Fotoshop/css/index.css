@@ -1,0 +1,138 @@
+/* Fonts von Google Fonts importieren, stehen jetzt zur Verwendung bereit */
+@import url('https://fonts.googleapis.com/css?family=Coiny|Roboto');
+
+/* Alle vorhandenen Styles (teilweise durch HTML vorgegeben) zurücksetzen */
+*, *:after, *:before {		/* Stern selektiert alles */
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;	/* Breite und Höhe beinhalten nun den Rand und den Innenabstand */
+}
+
+/* Styles für den Body */
+body {
+	background-color: #111;
+	position: relative;		/* Wenn man ein Element absolut positioniert,
+							wird immer vom nächst höheren Eltern Element mit position: relative ausgegangen */
+	overflow-x: hidden;		/* entlang der X-Achse überstehenden Content abschneiden */
+	width: 100vw; 			/* notwendig, damit scrollbar am rechten rand ignoriert wird, macht body genauso
+							breit wie viewport (100vw = 100% of viewport width) */
+}
+
+header {
+	display: block;			/* header soll als block floaten */
+	width: 100%;			/* header ist genauso breit wie das nächste Eltern Element mit position: relative
+							(in diesem Fall body) */
+	height: 5vw;
+	background-color: #111; /* HexCodes können 12bit (3Hex Ziffern) oder 24bit(6Hex Ziffern) lang sein.
+							#111 entspricht #111111, #123 entspricht #112233 */
+}
+
+#Menu {
+	display: block;			/* menu floatet als block und ist damit unter dem header */
+	width: 100%;
+	background-color: #222;
+	position: relative;
+	font-size: 0;			/* Da Inline-Blocks im Textfluss sind und im Quellcode eventuell Leerzeichen
+							vorhanden sind, die als Leerzeichen gerendert werden, kann es sein, dass die Breite
+							von Elementen falsch zusammengerechnet wird
+							--> Hack: im Eltern-Element, das Inline-Blocks enthält, die Schriftgröße auf 0 setzen
+							--> Vorsicht: em kann nicht mehr verwendet werden, da sich das em auf Eltern-Element
+							bezieht --> Lösung: rem, Schriftgröße des body, 1rem ist die Standardschriftgröße
+							des Browsers. */
+}
+
+#Menu a.MenuItem {			/* Selektiert Links (a Tag) mit der Klasse "MenuItem", die in einem Element mit der
+							ID "Menu" enthalten sind */
+	display: inline-block;
+	width: 33.3333%;
+	background-color: #222;
+	font-size: 1rem;		/* zurücksetzen der Schriftgröße */
+	color: #fff;
+	padding: 1rem;
+	text-align: center;		/* Textfluss mittig ausrichten (betrifft auch inline und inline-block Elemente) */
+}
+
+#Content {
+	display: block;
+	width: 100%;
+	position: relative;
+	color: #fff;
+	font-size: 0;		
+}
+
+.Image {					/* Image Klasse kommt nicht mehr im HTML vor, zum besseren Verständnis */
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	right: 0%;
+	height: 50vw;
+	text-align: center;
+}
+
+.Image img {
+	height: 100%;
+	min-width: 100%;
+}
+
+h1 {
+	font-family: Coiny;		/* Verwendung der Schrifart Coiny, die wir von Google Fonts importiert haben. */
+	color: #ddd;
+	font-size: 3rem;
+	line-height: 10rem;		/* Zeilenabstand setzen. */
+}
+
+p {
+	font-family: Roboto;	/* Roboto wurde auch von Google Fonts importiert */
+	font-size: 1.5vw;
+	line-height: 2.5vw;		/* Eine Zeilenhöhe von 1,5 * Schriftgröße wird als am angenehmsten empfunden */
+	margin-bottom: 3rem;
+}
+
+b {
+	display: inline;		/* p ist das einzige Element in HTML, das in seinem Content nur inline
+							Elemente zulässt */
+	color: #f00;
+}
+b:after {					/* Special: CSS enthält die Pseudoelemente :after und :before, mit denen man Inhalt
+							vor und nach dem ursprünglichen Inhalt des Elementes einfügen kann.
+							--> Achtung: content muss dabei immer gesetzt sein.
+							--> Special: die beiden Elemente können separat gestyled und verschoben werden,
+							nützlich für Animationen (3 Elemente in 1) */
+	content: ' - ';
+}
+/*------------------------------*/
+
+.ib {						/* Kacheln bekommen alle die Klasse .ib */
+	display: inline-block;
+	width: 25vw;
+	height: 25vw;
+	background-color: #444; /* #444444 --> #444*/
+	border: 1px solid #eee;
+	margin: 0;
+	overflow: hidden;
+	font-size: 2vw;
+	vertical-align: top;	/* inline-blocks können innerhalb der Zeile mittig, oben oder unten platziert werden
+							-->Special: nützlich in Verbindung mit line-height, um vertikal zu zentrieren */
+	padding: 1vw;
+}
+
+.ib img {					/* Selektion der Bilder, die in einer Kachel enthalten sind */
+	position: relative;		/* Bild wird um 1vw nach oben und links repositioniert. */
+	top: -1vw;
+	left: -1vw;
+	width: 100%;			/* Fallback: wird von calc() überschrieben, greift aber, falls Browser kein calc() kann */
+	width: calc(100% + 2vw); /* Die calc() Funktion akzeptiert zwei Maße als Parameter, die dann zusammengerechnet
+							 werden. Wird hier gebraucht, da .ib einen Padding von 1vw hat und das Bild innerhalb
+							 der Content Box dann in jede Richtung 1vw zu klein wäre (Rand nach innen). */
+}
+
+@media screen and (orientation: landscape) {	/* Wählt Bildschirme im Querformat aus */
+	.ib {
+		width: 48vw;
+		height: 48vw;
+		margin: 1vw;							
+	}
+}
+
+/* Next Step: CSS3 transitions und animations */
