@@ -7,6 +7,7 @@ public class Schokolade {
 		int anzKleineTafelnInKg = 0;
 		int anzGrosseTafelnInKg = 0;
 		int groessePaketInKg = 0;
+		int maske = 101;
 		
 		//Eingabe der Variablen
 		System.out.println("Eingabe von kleine Tafeln (je 1kg) in kg:");
@@ -17,7 +18,7 @@ public class Schokolade {
 		System.out.println("Eingabe von groesse des Pakets in kg:");
 		groessePaketInKg = in.nextInt();
 		
-		int temp = 7 % 1;
+		int temp = maske & groessePaketInKg  ;
 		System.out.println(temp);
 	}
 }

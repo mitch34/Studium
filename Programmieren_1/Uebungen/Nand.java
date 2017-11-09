@@ -32,7 +32,7 @@ public class Nand {
 		 *   o  | 1  1
 		 *   1  | 1  0
 		 */
-		ergebnis = !(x & y);
+		ergebnis = !(x && y);
 		
 		System.out.println("Ergebnis: " + ergebnis);
 		

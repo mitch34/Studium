@@ -6,11 +6,27 @@ public class Pechkeks {
 		// Variablen
 		int n = 0;
 		
+		// Eingabe der Variable n
 		System.out.println("Geben Sie eine ganze Zahl ein:");
 		Scanner in = new Scanner(System.in);
 		n = in.nextInt();
 		
-		// Ausgabe: n mit !
+		/* 
+		 * Überprüfen der Variable: n
+		 * n % 3 == 0 und n % 5 == 0, Ausgabe: "PechKeks!"
+		 * z.B. n = 15, Ausgabe: "PechKeks!"
+		 *
+		 * sonst, prüfe 
+		 * n % 5 == 0, Ausgabe: "Keks!"
+		 * z.B. n = 25, Ausgabe: "Keks!"
+		 *
+		 * sonst, prüfe
+		 * n % 3 == 0, Ausgabe: "Pech!"
+		 * z.B. n = 6, Ausgabe: "Pech!"
+		 *
+		 * anderfalls, Ausgabe: "n!"
+		 * z.B. n = 13, Ausgabe: "Ausgabe von n:13!"
+		 */
 		
 		if ( n % 3 == 0 && n % 5 == 0)
 		{

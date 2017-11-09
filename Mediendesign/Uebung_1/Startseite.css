@@ -1,0 +1,149 @@
+﻿* {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.25;
+  background-color: white;
+  text-decoration: none;
+  }
+
+#Head {
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	width: 1024px;
+	height: 280px;
+	border: 1px solid black;
+}  
+  
+  
+#Logo {
+	position: absolute;
+	top: 60px;
+	left: 500px;
+	border: 1px solid black;
+}  
+  
+#Navigationsbar {
+                 position: absolute;
+                 top: 240px;
+				 left: 10px;
+                 width: 1000px;
+                 height: 35px;
+                 margin: 1px;
+                 border: 1px solid black;
+                 background: gray;
+                 }
+
+ul#NavShortCuts {
+                 position: absolute;
+                 top: 10px;
+                 left: 0px;
+                 background: gray;
+                 list-style-type:none;
+                 }
+li#Home {
+        position: absolute;
+        top: 0px;
+        left: 170px;
+        background-color: gray;
+        }
+
+li#Produkte {
+         position: absolute;
+         top: 0px;
+         left: 320px;
+         background-color: gray;
+         }
+
+li#Warenkorb {
+             position: absolute;
+             top: 0px;
+             left: 470px;
+             background-color: gray;
+             }
+
+li#MeinScanPen {
+                   position: absolute;
+                   top: 0px;
+                   left: 650px;
+                   background-color: gray;
+                   }
+
+#Content {
+         position: absolute;
+         top: 295px;
+         left: 0px;
+         width: 1024px;
+         height: 565px;
+         margin: 1px;
+         border: 1px solid black;
+         }
+
+h1 {
+   position: absolute;
+   top: 30px;
+   left: 250px;
+   color: black;
+   text-decoration:underline;
+   text-align: center;
+   }				   
+
+#Footer {
+        position: absolute;
+        top: 870px;
+        left: 0px;
+        width: 1024px;
+        height: 35px;
+        margin: 1px;
+        padding: 2px;
+        border: 1px solid black;
+        background-color: gray;
+        }
+
+ul#FooterShortCuts {
+                   position: absolute;
+                   top: 0px;
+                   left: 0px;
+                   list-style-type: none;
+                   background-color: #CCCCCC;
+                   }
+
+li#cr {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      background-color: gray;
+      }
+
+li#AGB {
+       position: absolute;
+       top: 10px;
+       left: 320px;
+       background-color: gray;
+       }
+
+li#Impressum {
+             position:absolute;
+             top: 10px;
+             left: 570px;
+             background-color: gray;
+             }
+
+li#Kontakt {
+           position: absolute;
+           top: 10px;
+           left: 850px;
+           background-color: gray;
+           }
+				   
+a {
+  background-color: gray;
+  color: black;
+  text-decoration:underline;
+  }
+ 
