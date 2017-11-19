@@ -29,6 +29,7 @@ public class Quersumme {
 		{
 			quersumme += zahl%100;
 			zahl = zahl / 100;
+			
 		}
 		System.out.println("\n2er Quersumme:" +quersumme);
 		
@@ -62,6 +63,7 @@ public class Quersumme {
 			do {        
 				quersumme += tempZahl % 10;
 				tempZahl = tempZahl / 10;
+				System.out.print(quersumme+ "\n");
 			} while (tempZahl > 0);
 			tempZahl = quersumme;
 		}
