@@ -38,8 +38,8 @@ public class Rational {
     }
 
     public Rational inc () {
-		 int zaehlerNeu = this.zaehler + this.nenner;
-        return new Rational (zaehlerNeu,this.nenner);
+		 int zaehlerNeu = zaehler + nenner;
+        return new Rational (zaehlerNeu,nenner);
     }
 
     public Rational kehrwert() {
@@ -47,8 +47,8 @@ public class Rational {
     }
 
     public Rational mal(Rational r) {
-		this.zaehler = this.zaehler * this.zaehler;
-		this.nenner = this.nenner * this.nenner;
-        return new Rational (this.zaehler,this.nenner);
+		int zaehler = r.zaehler * this.zaehler;
+		int nenner = r.nenner * this.nenner;
+        return new Rational (zaehler,nenner);
     }
 }  // end of class Rational

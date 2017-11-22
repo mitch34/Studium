@@ -3,18 +3,24 @@ public class Rechteck {
     private int laenge;
     private int breite;
 
-    public Rechteck (int l, int b) {}
+    public Rechteck (int l, int b) {
+		this.laenge = l;
+		this.breite = b;
+	}
     
     public int umfang() {
-        return 1;
+		int umfang = (2 * laenge) + (2 * breite);
+        return umfang;
     }
 
     public int flaecheninhalt() {
-        return 1;
+		int flaeche = laenge * breite;
+        return flaeche;
     }
 
     public String toString() {
-        return "";
+		return "Rechteck("+(this.laenge)+" x "+(this.breite)+")";
+        
     }
 
 }
