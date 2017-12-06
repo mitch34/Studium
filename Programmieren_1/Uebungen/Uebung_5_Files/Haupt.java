@@ -5,10 +5,23 @@ public class Haupt {
     }
 
     public static double monteCarlo (int anzahlPunkte) {
+		double x = 0;
+		double y = 0;
+		double zaehler = 0;
+		double pi = 0;
+		double verhaeltnis = 0;
+		
+		for(int i = 0; i <= anzahlPunkte; i++)
+		{
         // So bekommt man Zufallszahlen
-        // x = Math.random();
-        // y = Math.random();
-        return 1;
+        x = Math.random();
+        y = Math.random();
+		if((x * x) + (y * y) < 1)
+			zaehler += 1;
+		}
+		verhaeltnis = zaehler / anzahlPunkte;
+		pi = verhaeltnis * 4;
+        return pi;
     }
 
     public static double leibniz(int anzahlSummanden) {
@@ -40,14 +53,15 @@ public class Haupt {
 
         // Aufgabe 3
         System.out.println("Math.PI:                  " + Math.PI);
-        System.out.println("Monte Carlo (1000 Punkte) " + monteCarlo(1000));
-        System.out.println("Monte C. (1000000 Punkte) " + monteCarlo(1000000));
+        System.out.println("Monte Carlo (1000 Punkte) " + monteCarlo(1000)); // 1000
+        System.out.println("Monte C. (1000000 Punkte) " + monteCarlo(1000000)); //1000000
         System.out.println("Leibniz (1000 Faktoren)   " + leibniz(1000));
         System.out.println("Leibniz (1000000 Faktoren)" + leibniz(1000000));
 
 
         // Aufgabe 4
-        
+        Vielfaches v = new Vielfaches();
+		v.eingabe();
     }
 
         
